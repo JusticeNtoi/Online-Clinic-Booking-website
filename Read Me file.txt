@@ -1,0 +1,32 @@
+Read Me
+
+Step 1. Save the WDD 1923803 Korotsoane folder in htdocs.
+
+Step 2. Import bothoclinic sql file in MySQL database.
+
+Step 3. Copy and paste the Link below on a browser to open Students website.. if running Apache on port 8080
+
+http://localhost:8080/WDD%201923803%20Korotsoane/login%20form.php
+
+OR if running Apache on port 80
+
+http://localhost:80/WDD%201923803%20Korotsoane/login%20form.php
+
+Else
+
+Type: localhost:8080\WDD 1923803 Korotsoane\login form.php
+
+Step 4. Copy and paste the Link below on a browser to open Nurse and Admin website.. if running Apache on port 8080
+
+http://localhost:8080/WDD%201923803%20Korotsoane/Homepage.php
+
+OR 
+
+http://localhost:80/WDD%201923803%20Korotsoane/Homepage.php if running Apache on port 80.
+
+Else type: localhost:8080\WDD 1923803 Korotsoane\Homepage.php
+
+
+if there is any problem on running the links Email: korotsoane.ntoi@bothouniversity.com
+
+Thank you.

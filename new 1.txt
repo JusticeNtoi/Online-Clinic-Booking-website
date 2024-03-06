@@ -1,0 +1,76 @@
+function onChange() {
+  const password = document.querySelector('input[name=password]');
+  const confirm = document.querySelector('input[name=confirm]');
+  if (confirm.value === password.value) {
+    confirm.setCustomValidity('');
+  } else {
+    confirm.setCustomValidity('Passwords do not match');
+  }
+}
+
+var check = function(){
+    if (document.getElementById('password').value ==
+        document.getElementById('confirm').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'matching';
+        }
+		else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'not matching';
+        }
+    }
+
+
+<--?php
+
+$policy_type=$_POST['policy_type'];
+$policy_description=$_POST['policy_description'];
+$duration=$_POST['Duration'];
+$assistant=$_POST['Assistant'];
+echo 'The policy_type is' . $policy_type. '-The_policy_description is' .$policy_description. '-The duration is' .$Duration.;
+
+
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "lehakoe";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "INSERT INTO course)_Check (policy_type, policy_description, duration)
+VALUES ('$policy_type', '$policy_description', '$duration','$assistant')";
+
+if (mysqli_query($conn, $sql)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
+
+<?php
+session_start();
+
+if(!isset($_SESSION['doctorSession']))
+{
+ header("Location: doctordashboard.php");
+}
+else if(isset($_SESSION['doctorSession'])!="")
+{
+ header("Location: ../index.php");
+}
+
+if(isset($_GET['logout']))
+{
+ session_destroy();
+ unset($_SESSION['student_id']);
+ header("Location: login form.php");
+}
+?>
